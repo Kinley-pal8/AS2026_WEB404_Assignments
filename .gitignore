@@ -1,0 +1,11 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Generated SQLite databases (recreate with db/seed.py)
+Assigments/*/db/*.db
+
+# Generated demo transcripts (recreate with exploits/run-demo.sh)
+Assigments/*/evidence/demo-output.txt
