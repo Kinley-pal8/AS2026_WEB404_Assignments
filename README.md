@@ -19,7 +19,7 @@ topic descriptions and grading criteria.
 | 2 | JWT Authentication Attacks | Done | [Assigments/Assigment_2](Assigments/Assigment_2) |
 | 3 | SSRF + Access Control | Done | [Assigments/Assigment_3](Assigments/Assigment_3) |
 | 4 | Cross-Site Scripting (XSS) + CSP | Done | [Assigments/Assigment_4](Assigments/Assigment_4) |
-| 5 | Server-Side Template Injection (SSTI) | Not started | Assigments/Assigment_5 |
+| 5 | Server-Side Template Injection (SSTI) | Done | [Assigments/Assigment_5](Assigments/Assigment_5) |
 
 ### 1. SQL Injection - Build & Defend
 
@@ -55,10 +55,13 @@ Content-Security-Policy, and `HttpOnly`/`SameSite` cookie attributes.
 
 ### 5. Server-Side Template Injection (SSTI)
 
-Not built yet. Per the brief: render user input through a server-side
-template engine (Jinja2/Twig/FreeMarker), exploit it toward RCE or data
-disclosure, then remediate with sandboxing/logic-less templates and strict
-separation of user input from template logic.
+"CardForge": a greeting-card preview feature that renders user input through
+Jinja2 by splicing it into the template source. Demonstrates injection
+detection (`{{ 7*7 }}`), sensitive-data disclosure (`{{ config }}` leaking a
+signing key and DB password), and remote code execution via the
+`cycler.__init__.__globals__.os.popen(...)` gadget. Fixed by binding user
+input as template data to a constant template, removing secrets from the
+render scope, and running a sandboxed, auto-escaping environment.
 
 ## Layout convention
 
@@ -74,9 +77,11 @@ Each assignment folder follows the same shape:
 | `exploits/run-demo.sh` | Boots everything needed, runs every exploit against both builds, saves a transcript. |
 | `evidence/` | The auto-generated transcript, plus a checklist of Burp Suite / browser screenshots still needed for the report. |
 
-Every vulnerable/fixed pair is a small, dependency-free Python 3 program
-(standard library only) so grading needs nothing beyond Python 3, `curl`,
-and `bash` - no `pip install`, no network access, no external services.
+Every vulnerable/fixed pair is a small Python 3 program so grading needs
+nothing beyond Python 3, `curl`, and `bash` - no network access and no
+external services. Assignments 1-4 are standard library only; Assignment 5
+is the one exception, requiring `Jinja2` (`pip install jinja2`), since the
+topic is injection into a real template engine.
 
 ## Quick start
 
