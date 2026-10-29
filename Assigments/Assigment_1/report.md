@@ -1,7 +1,6 @@
 # SQL Injection - Build & Defend
 
 **Module:** WEB404 Secure Coding Practices - Assignment 1 (Topic 1)
-**Author:** waangmo22@gmail.com
 **Artefacts:** `vulnerable/app.py`, `fixed/app.py`, `exploits/*.sh`, `evidence/demo-output.txt`
 
 ---

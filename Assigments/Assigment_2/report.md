@@ -1,7 +1,6 @@
 # JWT Authentication Attacks
 
 **Module:** WEB404 Secure Coding Practices - Assignment 2 (Topic 2)
-**Author:** waangmo22@gmail.com
 **Artefacts:** `vulnerable/app.py`, `fixed/app.py`, `exploits/*.sh`, `exploits/jwt_forge.py`, `evidence/demo-output.txt`
 
 ---

@@ -1,7 +1,6 @@
 # Cross-Site Scripting (XSS) + CSP
 
 **Module:** WEB404 Secure Coding Practices - Assignment 4 (Topic 4)
-**Author:** waangmo22@gmail.com
 **Artefacts:** `vulnerable/app.py`, `fixed/app.py`, `exploits/*`, `evidence/demo-output.txt`
 
 ---

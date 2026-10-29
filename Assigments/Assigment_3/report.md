@@ -1,7 +1,6 @@
 # SSRF + Access Control
 
 **Module:** WEB404 Secure Coding Practices - Assignment 3 (Topic 3)
-**Author:** waangmo22@gmail.com
 **Artefacts:** `internal/service.py`, `vulnerable/app.py`, `fixed/app.py`, `exploits/*`, `evidence/demo-output.txt`
 
 ---

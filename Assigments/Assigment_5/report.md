@@ -1,7 +1,6 @@
 # Server-Side Template Injection (SSTI)
 
 **Module:** WEB404 Secure Coding Practices - Assignment 5 (Topic 5)
-**Author:** waangmo22@gmail.com
 **Artefacts:** `vulnerable/app.py`, `fixed/app.py`, `exploits/*`, `evidence/demo-output.txt`
 
 ---
